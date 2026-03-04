@@ -1,0 +1,33 @@
+personal:
+  name: "Your Name"
+  title: "Full Stack Developer"
+  bio: "Passionate developer building modern web applications"
+  email: "your.email@example.com"
+  website: "https://yourwebsite.com"
+  github: "yourusername"
+  twitter: "yourusername"
+  linkedin: "yourusername"
+  location: "Your City, Country"
+
+site:
+  title: "Your Name - Full Stack Developer"
+  description: "Personal portfolio and blog"
+  url: "https://yourwebsite.com"
+  keywords:
+    - developer
+    - portfolio
+    - react
+    - nextjs
+    - typescript
+
+navigation:
+  - name: "Home"
+    href: "/"
+  - name: "About"
+    href: "/about"
+  - name: "Projects"
+    href: "/projects"
+  - name: "Blog"
+    href: "/blog"
+  - name: "Contact"
+    href: "/contact"
