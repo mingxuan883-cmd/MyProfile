@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { BackgroundMusic } from "@/components/background-music";
 import { MusicProvider } from "@/contexts/music-context";
+import { Toaster } from "sonner";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({
             <Footer />
             <BackgroundMusic />
           </MusicProvider>
+          <Toaster position="top-center" richColors />
         </ThemeProvider>
       </body>
     </html>

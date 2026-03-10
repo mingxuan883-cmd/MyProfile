@@ -1,6 +1,7 @@
 "use client";
 
 import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -17,21 +18,24 @@ export function ProjectsSection() {
   const projects = [
     {
       id: 1,
-      name: "Project 1",
-      description: "Project description goes here",
-      technologies: ["React", "TypeScript", "Tailwind"],
+      name: "AeroTraceX",
+      description: "A React-based aircraft tracking application that displays real-time flight data on Google Maps with smooth airplane animations using WGS 84 coordinates.",
+      technologies: ["React", "Java", "Node.js", "Tailwind", "TypeScript", "MySQL"],
+      imageUrl: "/gif/AeroTraceX.gif",
     },
     {
       id: 2,
-      name: "Project 2",
-      description: "Project description goes here",
-      technologies: ["Next.js", "Node.js", "PostgreSQL"],
+      name: "TBoostAI",
+      description: "TBoost AI is building the future of car ownership with intelligent automotive assistance powered by AI.",
+      technologies: ["Spring Boot 3.x", "Spring Cloud", "Spring Data JPA", "MySQL", "Redis", "JWT", "WebFlux", "Vue", "Element UI", "Nacos"],
+      imageUrl: "/gif/tboostai.png",
     },
     {
       id: 3,
-      name: "Project 3",
-      description: "Project description goes here",
+      name: "Rental Management",
+      description: "A comprehensive rental management system for property management and tenant operations",
       technologies: ["Python", "FastAPI", "Docker"],
+      imageUrl: "/gif/RentalManagement.gif",
     },
   ];
 
@@ -54,14 +58,25 @@ export function ProjectsSection() {
               <Card className="h-full flex flex-col hover:shadow-lg transition-shadow duration-300">
                 <CardHeader>
                   <div className="aspect-video rounded-lg mb-4 overflow-hidden">
-                    <div className="aspect-video bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                      <span className="text-white text-2xl font-bold">
-                        {project.name
-                          .split(" ")
-                          .map((word) => word[0])
-                          .join("")}
-                      </span>
-                    </div>
+                    {project.imageUrl ? (
+                      <Image
+                        src={project.imageUrl}
+                        alt={project.name}
+                        width={640}
+                        height={360}
+                        className="w-full h-full object-cover"
+                        unoptimized
+                      />
+                    ) : (
+                      <div className="aspect-video bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                        <span className="text-white text-2xl font-bold">
+                          {project.name
+                            .split(" ")
+                            .map((word) => word[0])
+                            .join("")}
+                        </span>
+                      </div>
+                    )}
                   </div>
                   <CardTitle className="text-xl">{project.name}</CardTitle>
                   <CardDescription className="text-base">
@@ -80,17 +95,7 @@ export function ProjectsSection() {
                 </CardContent>
 
                 <CardFooter className="flex gap-2">
-                  <Button asChild className="flex-1">
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
-                    </a>
-                  </Button>
-                  <Button variant="outline" asChild>
+                  <Button variant="outline" asChild className="w-full">
                     <a
                       href="#"
                       target="_blank"

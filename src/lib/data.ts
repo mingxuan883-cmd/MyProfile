@@ -104,3 +104,11 @@ export async function getProjects(): Promise<Project[]> {
   // TODO: Implement data loading
   return [];
 }
+
+export async function getContactInfo() {
+  return {
+    email: "mingxuan883@gmail.com",
+    responseTime: "24-48 hours",
+    availableForWork: true,
+  };
+}

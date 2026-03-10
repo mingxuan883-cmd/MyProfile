@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useMusicContext } from "@/contexts/music-context";
 
 export function BackgroundMusic() {
-  const [isPlaying, setIsPlaying] = useState(true);
+  const { isPlaying, setIsPlaying } = useMusicContext();
   const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
