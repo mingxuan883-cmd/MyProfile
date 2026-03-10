@@ -234,7 +234,7 @@ export function ContactForm() {
           <Button
             type="submit"
             className="w-full"
-            disabled={isSubmitting || (process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && !turnstileToken)}
+            disabled={isSubmitting || (!!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && !turnstileToken)}
           >
             {isSubmitting ? (
               <>
