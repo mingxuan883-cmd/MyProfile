@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useMusicContext } from "@/contexts/music-context";
@@ -8,17 +8,32 @@ import { useMusicContext } from "@/contexts/music-context";
 export function BackgroundMusic() {
   const { isPlaying, setIsPlaying } = useMusicContext();
   const audioRef = useRef<HTMLAudioElement>(null);
+  const [hasUserInteracted, setHasUserInteracted] = useState(false);
 
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.volume = 0.3;
-      // Auto play on mount
-      audioRef.current.play().catch((error) => {
-        console.log("Auto-play prevented:", error);
-        setIsPlaying(false);
-      });
     }
-  }, []);
+
+    // Add global click listener to start music on first user interaction
+    const handleFirstClick = () => {
+      if (!hasUserInteracted && audioRef.current) {
+        audioRef.current.play().then(() => {
+          setIsPlaying(true);
+          setHasUserInteracted(true);
+        }).catch((error) => {
+          console.log("Music play failed:", error);
+        });
+      }
+    };
+
+    // Add listener to document to catch any click
+    document.addEventListener('click', handleFirstClick);
+
+    return () => {
+      document.removeEventListener('click', handleFirstClick);
+    };
+  }, [hasUserInteracted, setIsPlaying]);
 
   const togglePlay = () => {
     if (audioRef.current) {

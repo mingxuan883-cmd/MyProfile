@@ -101,8 +101,19 @@ export async function getWorkExperience(): Promise<WorkExperience[]> {
 }
 
 export async function getProjects(): Promise<Project[]> {
-  // TODO: Implement data loading
-  return [];
+  const fs = await import("fs");
+  const path = await import("path");
+  const yaml = await import("js-yaml");
+
+  try {
+    const projectsPath = path.join(process.cwd(), "data", "projects.yaml");
+    const fileContents = fs.readFileSync(projectsPath, "utf8");
+    const projects = yaml.load(fileContents) as Project[];
+    return projects || [];
+  } catch (error) {
+    console.error("Error loading projects:", error);
+    return [];
+  }
 }
 
 export async function getContactInfo() {

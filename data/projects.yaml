@@ -1,0 +1,44 @@
+- id: "745TermProject"
+  name: "ML-Based Intrusion Detection System"
+  description: "Advanced machine learning system for network security featuring efficient IDS filtering and warning capabilities. Implements multiple ML algorithms including MLP and CNN variants with sophisticated data preprocessing and feature selection."
+  url: "https://github.com/YuKiAndrew/745TermProject"
+  technologies: ["Python", "Machine Learning", "Neural Networks", "Data Analysis", "Cybersecurity"]
+  imageUrl: "/images/projects/ids-system.jpg"
+  featured: true
+  pinned: true
+
+- id: "Survey_Platform"
+  name: "Full-Stack Survey Platform"
+  description: "Complete survey management platform with modern web technologies. Features a Vue.js frontend for intuitive user experience and a robust Java backend with microservice architecture for scalable data processing."
+  url: "https://github.com/YuKiAndrew/Survey_Platform_frontend"
+  technologies: ["Vue.js", "Java", "Spring Boot", "Maven", "AWS", "Full-Stack Development"]
+  imageUrl: "/images/projects/survey-platform.jpg"
+  featured: true
+  pinned: true
+
+- id: "MilvusMicroService"
+  name: "Milvus Vector Database Microservice"
+  description: "Microservice application designed for seamless integration with Milvus vector database. Built with Java and Maven, providing efficient vector data management and retrieval capabilities for AI and ML applications."
+  url: "https://github.com/YuKiAndrew/MilvusMicroService"
+  technologies: ["Java", "Milvus", "Vector Database", "Microservices", "Maven", "AWS"]
+  imageUrl: "/images/projects/milvus-service.jpg"
+  featured: true
+  pinned: false
+
+- id: "Pest_Control"
+  name: "Agricultural Pest Prediction System"
+  description: "Machine learning solution for agricultural pest management using computer vision and predictive modeling. Leverages image processing techniques and Kaggle datasets to provide accurate pest identification and prediction."
+  url: "https://github.com/YuKiAndrew/Pest_Control"
+  technologies: ["Python", "Computer Vision", "Machine Learning", "Image Processing", "Agriculture Tech"]
+  imageUrl: "/images/projects/pest-control.jpg"
+  featured: false
+  pinned: false
+
+- id: "Vue_Lab"
+  name: "Vue.js Learning Laboratory"
+  description: "Experimental project for exploring Vue.js framework capabilities and modern frontend development patterns. Serves as a testing ground for new Vue.js features, components, and development techniques."
+  url: "https://github.com/YuKiAndrew/Vue_Lab"
+  technologies: ["Vue.js", "JavaScript", "Frontend Development", "Component Architecture"]
+  imageUrl: "/images/projects/vue-lab.jpg"
+  featured: false
+  pinned: false
