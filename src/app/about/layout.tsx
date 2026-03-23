@@ -7,7 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const { personal, site } = config;
 
   const baseUrl =
-    site?.url || process.env.NEXT_PUBLIC_BASE_URL || "https://yezz.me";
+    site?.url || process.env.NEXT_PUBLIC_BASE_URL;
   const pageUrl = `${baseUrl}/about`;
   const description = `Learn more about ${personal.name}, a ${personal.title}. ${personal.bio}`;
   const ogImageUrl = `${baseUrl}/api/og?title=${encodeURIComponent("About Me")}&author=${encodeURIComponent(personal.name)}&date=${encodeURIComponent(personal.title)}`;

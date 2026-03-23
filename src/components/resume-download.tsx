@@ -8,7 +8,7 @@ export function ResumeDownload() {
   const handleDownloadResume = () => {
     // Download resume from public directory
     const link = document.createElement('a');
-    link.href = '/andrew-yuan_20260302_1346.pdf';
+    link.href = '/AndrewYuan_Software Engineer.pdf';
     link.download = 'Andrew-Yuan-Resume.pdf';
     document.body.appendChild(link);
     link.click();
