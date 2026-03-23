@@ -84,11 +84,13 @@ export function HeroSection() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pb-24">
           <div className="space-y-8">
             <div style={{ minHeight: "180px" }} />
-            <div style={{ minHeight: "4rem" }} />
-            <div style={{ minHeight: "2rem" }} />
-            <div style={{ minHeight: "3rem" }} />
-            <div style={{ minHeight: "3rem" }} />
-            <div style={{ minHeight: "3rem" }} />
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground" style={{ textShadow: "0 4px 8px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2)" }}>
+              Andrew Yuan
+            </h1>
+            <div className="min-h-[2rem]" />
+            <div className="min-h-[3rem]" />
+            <div className="flex justify-center space-x-4 min-h-[3rem]" />
+            <div className="min-h-[3rem]" />
           </div>
         </div>
       </section>
