@@ -22,6 +22,7 @@ export function ProjectsSection() {
       description: "A React-based aircraft tracking application that displays real-time flight data on Google Maps with smooth airplane animations using WGS 84 coordinates.",
       technologies: ["React", "Java", "Node.js", "Tailwind", "TypeScript", "MySQL"],
       imageUrl: "/gif/AeroTraceX.gif",
+      githubUrl: "https://github.com/YuKiAndrew/AeroTraceX_BackEnd",
     },
     {
       id: 2,
@@ -29,6 +30,7 @@ export function ProjectsSection() {
       description: "TBoost AI is building the future of car ownership with intelligent automotive assistance powered by AI.",
       technologies: ["Spring Boot 3.x", "Spring Cloud", "Spring Data JPA", "MySQL", "Redis", "JWT", "WebFlux", "Vue", "Element UI", "Nacos"],
       imageUrl: "/gif/tboostai.png",
+      githubUrl: "#",
     },
     {
       id: 3,
@@ -36,6 +38,7 @@ export function ProjectsSection() {
       description: "A comprehensive rental management system for property management and tenant operations",
       technologies: ["Python", "FastAPI", "Docker"],
       imageUrl: "/gif/RentalManagement.gif",
+      githubUrl: "https://github.com/YuKiAndrew/HouseRentalManagement.git",
     },
   ];
 
@@ -97,7 +100,7 @@ export function ProjectsSection() {
                 <CardFooter className="flex gap-2">
                   <Button variant="outline" asChild className="w-full">
                     <a
-                      href="#"
+                      href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
